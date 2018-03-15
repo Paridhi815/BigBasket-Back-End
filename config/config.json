@@ -2,21 +2,21 @@
   "development": {
     "username": "pairprog",
     "password": "hello",
-    "database": "evaluationsdb",
+    "database": "bigbasketdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "pairprog",
     "password": "hello",
-    "database": "evaluationsdb",
+    "database": "bigbasketdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "pairprog",
     "password": "hello",
-    "database": "evaluationsdb",
+    "database": "bigbasketdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
