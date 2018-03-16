@@ -1,9 +1,9 @@
 
-const Models = require('../../models');
+const Models = require('../../../models');
 
-jest.mock('../helper/fetchItems');
+jest.mock('../../helper/fetchItems');
 
-const populateItemsDb = require('../helper/populateItemsDb');
+const populateItemsDb = require('../../helper/populateItemsDb');
 
 describe('Testing the helper function populate database with items', () => {
   beforeAll((done) => {
