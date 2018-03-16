@@ -1,4 +1,5 @@
 const Models = require('../../models');
+const Joi = require('joi');
 
 const storeResponses = {
   method: 'POST',
@@ -31,6 +32,14 @@ const storeResponses = {
         response('Created Order Details').code(201);
       })
       .catch(console.log);
+  },
+  config: {
+    validate: {
+      payload: {
+        orderDetailsObj: Joi.object()
+          .required(),
+      },
+    },
   },
 };
 

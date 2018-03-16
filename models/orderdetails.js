@@ -9,5 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   orderdetails.associate = function () {
     // associations can be defined here
   };
+
+
+  orderdetails.deleteAllOrderDetails = () => orderdetails.destroy({ truncate: true });
   return orderdetails;
 };
