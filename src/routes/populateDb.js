@@ -3,7 +3,10 @@ const Models = require('../../models');
 const populateItemsDb = require('../helper/populateItemsDb');
 
 
-const getItemsFromDb = () => Models.items.findAll({ group: 'id' }).then((res) => {
+const getItemsFromDb = () => Models.items.findAll({
+  group: 'id',
+  order: [['availableQuantity', 'DESC']],
+}).then((res) => {
   const result = res.reduce((accumulator, currentValue) => {
     const acc = accumulator;
     acc[currentValue.category] = acc[currentValue.category] || [];
@@ -13,7 +16,6 @@ const getItemsFromDb = () => Models.items.findAll({ group: 'id' }).then((res) =>
   return (result);
 });
 
-// const getItemsFromDb = () => Models.items.findAll();
 
 const ifItemsInDb = () => Models.items.count().then((noOfItems) => {
   if (noOfItems === 0) {

@@ -6,9 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     orderId: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER,
   }, {});
-  orderdetails.associate = function (models) {
+  orderdetails.associate = function () {
     // associations can be defined here
-    orderdetails.hasOne(models.items);
   };
   return orderdetails;
 };
